@@ -10,11 +10,19 @@ server.use(helmet());
 server.use(express.json());
 
 //POST /api/projects
-
 server.post('/api/projects', async (req, res) => {
     db.addProject(req.body)
         .then(project => {
           res.status(201).json(project);
+        })
+    .catch(err => res.status(500).json(err));
+  });
+
+//POST /api/actions
+server.post('/api/actions', async (req, res) => {
+    db.addAction(req.body)
+        .then(action => {
+          res.status(201).json(action);
         })
     .catch(err => res.status(500).json(err));
   });
