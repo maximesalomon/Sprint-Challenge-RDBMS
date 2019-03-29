@@ -27,6 +27,21 @@ server.post('/api/actions', async (req, res) => {
     .catch(err => res.status(500).json(err));
   });
 
+// GET /api/projects/:id
+server.get('/api/projects/:id', async (req, res) => {
+    const id = req.params.id;
+  db.getProjectByIdWithActions(id)
+    .then(project => {
+        if (project) {
+            res.status(200).json(project);
+        } else {
+            res.status(404).json({ message: 'The specified project does not exist.' });
+        }
+    })
+    .catch(err => console.log('error', err));
+  });
+
+
 
 const PORT = process.env.PORT || 7000;
 server.listen(PORT, () => console.log(`\nServer is running on port:${PORT}\n`));
