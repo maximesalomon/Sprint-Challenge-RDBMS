@@ -41,7 +41,5 @@ server.get('/api/projects/:id', async (req, res) => {
     .catch(err => console.log('error', err));
   });
 
-
-
 const PORT = process.env.PORT || 7000;
 server.listen(PORT, () => console.log(`\nServer is running on port:${PORT}\n`));
