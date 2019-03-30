@@ -33,20 +33,34 @@ This will be akin to the Web API that you built in the last sprint, only this ti
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 1. Explain the difference between `RDBMS` and `SQL`.
-1. Why do tables need a `primary key`?
-1. What is the name given to a table column that references the primary key on another table.
-1. What do we need in order to have a _many to many_ relationship between two tables.
+
+  RDBMS = Relational Database Management System (S).
+  SQL = Structured Query Language.
+
+  RDBM is the database software to manage database - SQLite, Postgres, MongoDB, etc. SQL is a programming language that enables you to query RDBM.
+
+2. Why do tables need a `primary key`?
+
+  To create a unique & artificial identifier.
+
+3. What is the name given to a table column that references the primary key on another table.
+
+  A foreign key.
+
+4. What do we need in order to have a _many to many_ relationship between two tables.
+
+  We need to create a junction table to JOIN foreign keys together.
 
 ## Project Set Up
 
 Follow these steps for starting your project.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your project manager as collaborator on Github.
+- [X] Clone your OWN version of the repository (Not Lambda's by mistake!).
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -58,27 +72,27 @@ Follow these steps for completing your project.
 
 **NOTE** There is no boilerplate for you for this project. You will need to take the steps necessary for creating this project from scratch. Start by initializing your project with a `package.json` file and go from there.
 
-- [ ] A `project` can contain multiple actions and has:
-  - [ ] a unique Id.
-  - [ ] a name.
-  - [ ] a description.
-  - [ ] a flag that indicates if the project is complete or not.
-- [ ] An `action` belongs to only one project. An action has:
-  - [ ] a unique id.
-  - [ ] a description of what needs to be done.
-  - [ ] a notes column to add additional information.
-  - [ ] a flag that indicates if the action has been completed.
+- [X] A `project` can contain multiple actions and has:
+  - [X] a unique Id.
+  - [X] a name.
+  - [X] a description.
+  - [X] a flag that indicates if the project is complete or not.
+- [X] An `action` belongs to only one project. An action has:
+  - [X] a unique id.
+  - [X] a description of what needs to be done.
+  - [X] a notes column to add additional information.
+  - [X] a flag that indicates if the action has been completed.
 
 Feel free to name the tables and fields anything you want. **Add relationships** as you see fit.
 
 ### Tasks
 
-- [ ] Build the database and tables using knex migrations. **Seeding is not needed**.
-- [ ] Build the API with the following endpoints:
+- [X] Build the database and tables using knex migrations. **Seeding is not needed**.
+- [X] Build the API with the following endpoints:
 
-  - [ ] POST for adding projects.
-  - [ ] POST for adding actions.
-  - [ ] GET for retrieving a `project` by its `id` that returns an object with the following structure:
+  - [X] POST for adding projects.
+  - [X] POST for adding actions.
+  - [X] GET for retrieving a `project` by its `id` that returns an object with the following structure:
 
     ```js
     {
